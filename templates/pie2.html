@@ -1,0 +1,126 @@
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- AmCharts includes -->
+        <script src="http://www.amcharts.com/lib/3/amcharts.js"></script>
+        <script src="http://www.amcharts.com/lib/3/pie.js"></script>
+        <!-- Export plugin includes and styles -->
+        <script src="../export.js"></script>
+        <link type="text/css" href="../export.css" rel="stylesheet">
+        <style>
+            body,
+            html {
+                height: 100%;
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+                font-size: 11px;
+                font-family: Verdana;
+            }
+            
+            #chartdiv {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <script type="text/javascript">
+            var chart = AmCharts.makeChart("chartdiv",
+            {
+                "type": "pie",
+                "titles": [
+                {
+                    "text": "Visitors countries",
+                    "size": 16
+                }],
+                "dataProvider": [
+{
+                    "country": "Hair Care",
+                    "litres": 156.9
+                },
+                {
+                    "country": "Detergents",
+                    "litres": 131.1
+                },
+                {
+                    "country": "Personal Wash",
+                    "litres": 115.8
+                },
+                {
+                    "country": "Ice Cream",
+                    "litres": 109.9
+                },
+                {
+                    "country": "Face Care",
+                    "litres": 108.3
+                },
+                {
+                    "country": "Boullion (Noodles)",
+                    "litres": 65
+                },
+                {
+                    "country": "Tea",
+                    "litres": 50
+                },
+                {
+                    "country": "Boullion (Cooking Aids)",
+                    "litres": 70
+                },
+                {
+                    "country": "SCC-Margarine",
+                    "litres": 80
+                },
+                {
+                    "country": "Sauces",
+                    "litres": 85
+                },
+                {
+                    "country": "Water",
+                    "litres": 99
+                }],
+                "valueField": "visits",
+                "titleField": "country",
+                "startEffect": "elastic",
+                "startDuration": 2,
+                "labelRadius": 15,
+                "innerRadius": "50%",
+                "depth3D": 10,
+                "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+                "angle": 15,
+                "legend":
+                {
+                    "position": "right"
+                },
+                "export":
+                {
+                    "enabled": true,
+                    "menu": [
+                    {
+                        "class": "export-main",
+                        "menu": [
+                        {
+                            "label": "Download",
+                            "menu": ["PNG", "JPG", "CSV"]
+                        },
+                        {
+                            "label": "Annotate",
+                            "action": "draw",
+                            "menu": [
+                            {
+                                "class": "export-drawing",
+                                "menu": ["PNG", "JPG", "CANCEL"]
+                            }]
+                        }]
+                    }]
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="chartdiv"></div>
+    </body>
+
+</html>
