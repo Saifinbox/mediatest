@@ -4,7 +4,6 @@ cffi==1.10.0
 click==6.7
 coverage==4.4.1
 Django==2.0.6
-dlib==19.13.1
 Flask==0.12.2
 Flask-Bcrypt==0.7.1
 Flask-Cors==3.0.4
